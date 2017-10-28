@@ -1,7 +1,14 @@
-Teste
+#Restaurante Gominhos
 
-Este é um repositório para aprender Git.
+Este é o repositório para o meu PFC (Projeto Final de Curso).
 
-Logo, irá virar o grande Restaurante Gominho's! :)
 
-De pouco em pouco, testando o git.
+O projeto consiste em um sistema para gerenciar reservas de um restaurante.
+
+Linguagem utilizada: Java
+BD: PostgreSQL
+Patterns: MVC / DAO / MVVM
+
+Frameworks: Nenhum
+
+Bibliotecas: Quartz, Commons Email
