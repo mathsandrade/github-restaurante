@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <listener>
+        <description>ServletContextListener</description>
+        <listener-class>Utils.Quartz.QuartzServletListener</listener-class>
+    </listener>
+    <session-config>
+        <session-timeout>
+            320
+        </session-timeout>
+    </session-config>
+    <!-- Filtro de Autenticação de Acesso  =  Necessário estar logado para entrar (Controles)-->
+    <filter>
+        <filter-name>AcessoLogadoControl</filter-name>
+        <filter-class>Utils.Filters.AcessoLogadoControl</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AcessoLogadoControl</filter-name>
+        <url-pattern>/pessoas</url-pattern>
+        <url-pattern>/mesas</url-pattern>
+        <url-pattern>/locacoes</url-pattern>
+        <url-pattern>/admin</url-pattern>
+    </filter-mapping>
+    <!-- Filtro de Autenticação de Acesso  =  Necessário estar logado para entrar (Pages)-->
+    <filter>
+        <filter-name>AcessoLogadoPages</filter-name>
+        <filter-class>Utils.Filters.AcessoLogadoPages</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AcessoLogadoPages</filter-name>
+        <url-pattern>/welcome.jsp</url-pattern>
+        <url-pattern>/nav.jsp</url-pattern>
+        <url-pattern>/assets.jsp</url-pattern>
+        <url-pattern>/pessoas/*</url-pattern>
+        <url-pattern>/mesas/*</url-pattern>
+        <url-pattern>/locacoes/*</url-pattern>
+        <url-pattern>/admin/*</url-pattern>
+    </filter-mapping>
+    <!-- Filtro de Autenticação de Usuario = Necessário ser ADMIN para entrar (Control)-->
+    <filter>
+        <filter-name>AcessoAdministrativoControl</filter-name>
+        <filter-class>Utils.Filters.AcessoAdministrativoControl</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AcessoAdministrativoControl</filter-name>
+        <url-pattern>/admin</url-pattern>
+    </filter-mapping>
+    <!-- Filtro de Autenticação de Usuario = Necessário ser ADMIN para entrar (Pages)-->
+        <filter>
+        <filter-name>AcessoAdministrativoPages</filter-name>
+        <filter-class>Utils.Filters.AcessoAdministrativoPages</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AcessoAdministrativoPages</filter-name>
+        <url-pattern>/admin/*</url-pattern>
+    </filter-mapping>
+</web-app>
