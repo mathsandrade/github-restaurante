@@ -6,10 +6,12 @@ O projeto consiste em um sistema para gerenciar reservas de um restaurante em PO
 
 ## Feito Utilizando
 
-Linguagens: Java / JavaScript / HTML / CSS / PostgreSQL
+Linguagens: Java / JavaScript / HTML / CSS
 
 Patterns: MVC / DAO / MVVM
 
 Libraries: Quartz
 
 API's: Commons Email
+
+BD: PostgreSQL
