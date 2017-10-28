@@ -10,4 +10,6 @@ Linguagens: Java / JavaScript / HTML / CSS / PostgreSQL
 
 Patterns: MVC / DAO / MVVM
 
-Libraries: Quartz, Commons Email
+Libraries: Quartz
+
+API's: Commons Email
