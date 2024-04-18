@@ -12,6 +12,6 @@ package Utils;
 public class EmailAutenticacao {
         public static String nome = "Gominho's";
 	public static String email = "freakymathmushroom@gmail.com";
-	public static String senha = "mt159874";
+	public static String senha = "";
 
 }
